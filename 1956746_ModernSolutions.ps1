@@ -44,8 +44,8 @@ Function Bamboozle( [string]$location = "./*") {
   Write-Host  "Roses are red" -ForegroundColor Red
   Write-Host "Violets are blue" -ForegroundColor Red
   Write-Host "Nobody loves you" -ForegroundColor Red
-  Write-Host ("And your files with ") -ForegroundColor Red -NoNewline
+  Write-Host ("And your ") -ForegroundColor Red -NoNewline
   Write-Host $PrintLetter -ForegroundColor Green -NoNewline
-  Write-Host " are gone too" -ForegroundColor Red
+  Write-Host " files are gone too" -ForegroundColor Red
   Get-ChildItem -Path $location -Include *$PrintLetter* -File -Recurse | Remove-Item -WhatIf
   }
